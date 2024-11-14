@@ -1,6 +1,6 @@
-import enum
+from enum import Enum
 
-class GrowthForm(enum.Enum):
+class GrowthForm(Enum):
     """Physical growth form and structure of the plant"""
     TREE = "TREE"
     SHRUB = "SHRUB"

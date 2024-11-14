@@ -1,6 +1,6 @@
-import enum
+from enum import Enum
 
-class SunExposure(enum.Enum):
+class SunExposure(Enum):
     FULL = "full"
     PARTIAL_SUN = "partial sun"
     PARTIAL_SHADE = "partial shade"

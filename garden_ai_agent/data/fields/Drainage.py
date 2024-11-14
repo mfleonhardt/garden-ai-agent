@@ -1,6 +1,6 @@
-import enum
+from enum import Enum
 
-class Drainage(enum.Enum):
+class Drainage(Enum):
     EXCELLENT = "excellent"
     GOOD = "good"
     POOR = "poor"

@@ -1,6 +1,6 @@
-import enum
+from enum import Enum
 
-class UseCategory(enum.Enum):
+class UseCategory(Enum):
     """Primary use or purpose of the plant"""
     ORNAMENTAL = "ORNAMENTAL"
     VEGETABLE = "VEGETABLE"
