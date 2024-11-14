@@ -50,6 +50,13 @@ class Plant(db.Model):
     care_instructions = db.Column(db.Text, nullable=True)  # Basic care guidelines
     notes = db.Column(db.Text, nullable=True)  # Additional notes
 
+    observations = db.relationship(
+        'Observation',
+        backref='plant',
+        lazy='dynamic',
+        cascade='all, delete-orphan'
+    )
+
     @validates('name')
     def validate_name(self, key, value: str) -> str:
         """Validates the plant's common name."""
