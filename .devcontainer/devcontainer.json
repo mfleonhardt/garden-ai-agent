@@ -1,0 +1,41 @@
+{
+    "name": "Garden Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "/bin/bash"
+                    }
+                },
+                "git.enableCommitSigning": false,
+                "git.autofetch": true,
+                "git.terminalAuthentication": true
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.debugpy",
+                "KnisterPeter.vscode-github",
+                "ms-azuretools.vscode-docker",
+                "GitHub.vscode-pull-request-github"
+            ]
+        }
+    },
+    "forwardPorts": [5001],
+    "postCreateCommand": [
+        "/bin/sh",
+        "-c",
+        "gh auth setup-git && git config --global credential.helper '!gh auth git-credential'&& git config --global --add safe.directory /workspaces/garden-ai-agent && git config --global user.name \"${GITHUB_USERNAME}\" && git config --global user.email \"${GITHUB_EMAIL}\" && git config --global --add url.\"https://github.com/\".insteadOf \"git@github.com:\" && pip install -r requirements.txt"
+    ],
+    "remoteUser": "vscode",
+    "runArgs": ["--env-file", ".devcontainer/.env"],
+    "features": {
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    }
+}

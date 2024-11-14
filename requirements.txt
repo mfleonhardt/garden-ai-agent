@@ -1,0 +1,7 @@
+Flask
+flask-restx
+flask-sqlalchemy
+flask-migrate
+alembic
+pytest
+requests

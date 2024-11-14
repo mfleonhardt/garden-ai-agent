@@ -1,0 +1,17 @@
+{
+    "python.testing.unittestArgs": [
+        "-v",
+        "--logging-level=WARNING",
+        "test/run_tests.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "python.analysis.extraPaths": [
+        ".",
+        "./api"
+    ],
+    "cursor.chat.alwaysSearchWeb": true,
+    "cursor.aipreview.enabled": true,
+    "cursor.chat.collapseInputBoxPills": true,
+    "cursor.chat.smoothStreaming": true
+}

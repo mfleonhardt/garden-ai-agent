@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Garden App Debug",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "run.py",
+            "env": {
+                "FLASK_DEBUG": "1"
+            },
+            "args": [],
+            "jinja": true,
+            "justMyCode": true
+        }
+    ]
+} 
