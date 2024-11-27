@@ -6,6 +6,7 @@ import logging
 from .api.garden_location import garden_location_ns
 from .api.irrigation_zone import irrigation_zone_ns
 from .api.plant import plant_ns
+from .api.observation import observation_ns
 from .data.database import db
 
 
@@ -18,6 +19,7 @@ def initialize_api(app):
     api.add_namespace(garden_location_ns)
     api.add_namespace(irrigation_zone_ns)
     api.add_namespace(plant_ns)
+    api.add_namespace(observation_ns)
 
 
 def create_app(test_config=None):
