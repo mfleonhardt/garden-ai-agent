@@ -7,6 +7,8 @@ from .UseCategory import UseCategory
 from .WindExposure import WindExposure
 from .ObservationType import ObservationType
 from .GrowthStage import GrowthStage
+from .MeasurementType import MeasurementType
+from .MeasurementUnit import MeasurementUnit
 
 __all__ = [
     'Day',
@@ -17,5 +19,7 @@ __all__ = [
     'UseCategory',
     'WindExposure',
     'ObservationType',
-    'GrowthStage'
+    'GrowthStage',
+    'MeasurementType',
+    'MeasurementUnit'
 ]
